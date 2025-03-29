@@ -1,50 +1,113 @@
-# Welcome to your Expo app 👋
+# GitHub Explorer
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native mobile application that allows users to explore GitHub repositories, view detailed information, and save favorite repositories for quick access.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Repository Search**: Search for repositories on GitHub by name
+- **Detailed Repository View**: View comprehensive details of repositories including:
+  - Repository name and description
+  - Star and fork counts
+  - Primary programming language
+  - Owner information and avatar
+- **Favorites System**: Save repositories to your favorites list for quick access
+- **Responsive Design**: Optimized for various screen sizes
+- **Error Handling**: Graceful handling of network issues and API errors
 
+## Bonus Features Implemented
+
+- **Pagination**: Infinite scroll for search results
+- **Dark Mode**: Toggle between light and dark themes
+- **Extended Repository Info**: View creation and last update dates
+- **Contributors List**: See all contributors to a repository
+
+## Installation and Setup
+
+### Prerequisites
+
+- Node.js (v14.0 or higher)
+- npm (v6.0 or higher) or Yarn (v1.22 or higher)
+- React Native CLI
+- Android Studio (for Android development)
+- Xcode (for iOS development, macOS only)
+- JDK 11
+
+### Setting Up Development Environment
+
+If you haven't set up React Native on your machine, follow the official guide:
+[React Native Environment Setup](https://reactnative.dev/docs/environment-setup)
+
+### Installing the App
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/boyidapuvivek/github-explorer.git
+   cd github-explorer
+   ```
+
+2. Install dependencies:
    ```bash
    npm install
+   # or using yarn
+   yarn install
    ```
 
-2. Start the app
+3. Create a `.env` file in the project root (optional for GitHub API rate limiting):
+   ```
+   GITHUB_API_TOKEN=your_personal_access_token
+   ```
+   Note: The app will work without this, but you might hit API rate limits.
 
+4. Run the Metro bundler:
    ```bash
-    npx expo start
+   npx react-native start
    ```
 
-In the output, you'll find options to open the app in a
+5. In a new terminal, run the app on Android:
+   ```bash
+   npx react-native run-android
+   ```
+   
+   Or on iOS (macOS only):
+   ```bash
+   npx react-native run-ios
+   ```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Installing the APK on Android
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+1. Download the APK file from [Releases](https://expo.dev/accounts/vivek_react/projects/github-explorer/builds/7eb286f0-d0b1-4fcb-870c-9f111efe2d1a)
+2. Enable installation from unknown sources in your Android device settings
+3. Open the APK file on your device to install
 
-## Get a fresh project
 
-When you're ready, run:
+## Technologies Used
 
-```bash
-npm run reset-project
-```
+- **React Native**: Core framework
+- **Redux**: State management
+- **React Navigation**: Navigation between screens
+- **Axios**: API requests
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## API Reference
 
-## Learn more
+This app uses the GitHub REST API:
+- Search Repositories: `https://api.github.com/search/repositories?q={query}`
+- Get Repository Details: `https://api.github.com/repos/{owner}/{repo}`
+- Get Repository Contributors: `https://api.github.com/repos/{owner}/{repo}/contributors`
 
-To learn more about developing your project with Expo, look at the following resources:
+## Contributing
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add some amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
 
-## Join the community
+## License
 
-Join our community of developers creating universal apps.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Acknowledgments
+
+- GitHub for providing the API
+- React Native community for the excellent documentation
+- [List any other resources or inspirations]
