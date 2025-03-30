@@ -1,6 +1,7 @@
 # GitHub Explorer
 
 A React Native mobile application that allows users to explore GitHub repositories, view detailed information, and save favorite repositories for quick access.
+Download the APK file from [Releases](https://expo.dev/accounts/vivek_react/projects/github-explorer/builds/7eb286f0-d0b1-4fcb-870c-9f111efe2d1a)
 
 ## Features
 
